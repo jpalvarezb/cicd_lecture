@@ -7,8 +7,8 @@ on:
     branches: ['master']
 
 jobs:
-  name: testing-api #naming convention of job
-  runs-on: ubuntu-latest
+  testing-api: #naming convention of job
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout to repo # Accesses our repository
