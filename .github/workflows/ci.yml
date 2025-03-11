@@ -1,4 +1,4 @@
-name: cicd_lecture
+name: cicd_lecture_2
 
 on:
   push:
