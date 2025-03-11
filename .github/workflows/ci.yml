@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout to repo # Accesses our repository
+      - name: Checkout to repo # Accesses our repository, to step into the repository (explicit)
         uses: actions/checkout@v4 # Actions is a marketplace of CI/CD tools
       - name: Install python
         uses: actions/setup-python@v4
