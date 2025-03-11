@@ -1,0 +1,23 @@
+name: cicd_lecture
+
+on:
+  push:
+    branches: ['master']
+  pull_request:
+    branches: ['master']
+
+jobs:
+  testing-api #naming convention of job
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout to repo # Accesses our repository
+        uses: actions/checkout@v4 # Actions is a marketplace of CI/CD tools
+      - name: Install python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Install dependencies
+        run: pip install .
+      - name: Test check
+        run: pytest
